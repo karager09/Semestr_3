@@ -1,0 +1,69 @@
+div.dwa{
+position:fixed;
+left:0;
+top:0;
+background:gray;
+height:100%;
+width:5cm;
+text-align: center;
+}
+
+
+div.raz{
+position:absolute;
+left:5.1cm;
+max-width:960px;
+background:yellow;
+border-width:1cm;
+border-color:black;
+border-style:solid;
+}
+
+.button{background-color:#06C8AD;
+text-align:center;}
+body {
+font-family: sans-serif;background:yellow;
+
+}
+
+
+h1{ color: green; 
+letter-spacing: 5mm;}
+h2{ color: olive; }
+h3{color:turquoise;}
+p{text-indent: 2cm; }
+p:first-letter{font-size:0.7cm; color:black;}
+
+div.dwa a:hover{
+color:green;
+cursor:default;}
+
+
+
+#tytul{text-align: center;
+	width: 100%;}
+
+colgroup.col1{background: silver;}
+thead{color:brown;text-transform:uppercase;}
+tfoot{color:blue; }
+tbody{color:orange;}
+table{
+border-color:brown;
+background: yellow;}
+
+
+
+
+
+
+ul{list-style-type: upper-roman;}
+ol{list-style-type: upper-roman;}
+ol ul{list-style-type: lower-roman;}
+ol ol{list-style-type: lower-roman;}
+ol ol ul{list-style-type: lower-greek;}
+
+
+#usmiech{float:right;}
+#kot{float:left;}
+
+

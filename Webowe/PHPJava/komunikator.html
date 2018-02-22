@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Komunikator</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+
+<script>
+
+function sprawdz() {
+	return document.getElementById("check").checked; }
+
+function sprawdzKomunikat() {
+	return document.getElementById("nick").value && document.getElementById("message").value; }
+
+function update() {
+	document.getElementById("chat").innerHTML = ""; 
+	var xmlhttp=new XMLHttpRequest();
+	
+	xmlhttp.onreadystatechange=function() {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200) {
+	if (sprawdz()) { 
+	document.getElementById("chat").innerHTML=xmlhttp.responseText;
+	}
+	}
+	if (xmlhttp.readyState==4) { 
+	xmlhttp.open("GET","wiadomosci.php",true);
+	xmlhttp.send();
+	}
+	}	
+	xmlhttp.open("GET", "wiadomosci.php", true); 
+	xmlhttp.send(); 
+}
+
+
+function send() {
+	var xmlhttp=new XMLHttpRequest();
+	
+	var imie = encodeURIComponent(document.getElementById("nick").value); 
+	var wiadomosc = encodeURIComponent(document.getElementById("message").value);
+	xmlhttp.open("GET", "wyslij.php?nick="+imie+"&message="+wiadomosc, true);
+	xmlhttp.send();
+
+	document.getElementById("message").value = ""; 
+
+
+}
+</script>
+
+</head>
+<body>
+<center>
+<input type="checkbox" name="check" id="check" onchange="update();"/>Uruchom komunikator<br/>
+<textarea rows="30" cols="70" id="chat" disabled></textarea><br/>
+Podaj nick: <input type="text" name="nick" id="nick" /></br>
+Wpisz wiadomość: <input type="text" name="message" id="message" /><br/>
+<button type="button" value="Wyślij" onclick="if (sprawdz() && sprawdzKomunikat()) { send(); } else { alert('Aby przesłać wiadomość: uruchom komunikator, podaj nick i wpisz wiadomość.'); }">Wyślij</button>
+<br/><br/><br/>
+<a href="./blog.php">Powrót do strony głównej blogu</a>
+
+</center>
+</body>
+</html>
