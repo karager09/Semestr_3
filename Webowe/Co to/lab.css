@@ -1,0 +1,36 @@
+body {
+font-family: sans-serif;
+
+
+
+
+}
+
+h1{ color: blue; 
+letter-spacing: 5mm;}
+h2{ color: green; }
+p{text-indent: 2cm; }
+p:first-letter{font-size:0.7cm; color:black;}
+
+div.dwa a:hover{color:green; cursor:default;}
+
+table{
+/*color:orange;*/
+
+}
+thead{color:green;text-transform:uppercase;}
+tfoot{color:blue; }
+tbody{}
+
+#col1{color: yellow;}
+
+ol{list-style-type: upper-roman;}
+ol ul{list-style-type: lower-roman;}
+ol ol{list-style-type: lower-roman;}
+ol ol ul{list-style-type: lower-greek;}
+
+
+#usmiech{float:right;}
+#kot{float:left;}
+
+
