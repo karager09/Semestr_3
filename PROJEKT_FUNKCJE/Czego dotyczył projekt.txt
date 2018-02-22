@@ -1,0 +1,12 @@
+8.Obliczanie wartoœci funkcji zadanej przez u¿ytkownika
+Celem projektu jest zaimplementowanie biblioteki pozwalaj¹cej na parsowanie funkcji zadanych przez u¿ytkownika i nastêpnie obliczanie 
+wartoœci tych funkcji w punktach podanych przez u¿ytkownika (czyli dla zadanych wartoœci parametrów). 
+Np. u¿ytkownik definiuje funkcje postaci:
+x^2 + 3*sin(y)
+i jako punkt, w którym chce znaæ wartoœæ funkcji podaje: x=2, y=2
+biblioteka powinna sparsowaæ zapis (string) 'x^2 + 3*sin(y)', i obliczyæ, ¿e dla x=2, y=0 wartoœæ wynosi 4.
+W bibliotece powinna byæ mo¿liwoœæ ³atwego definiowania w³asnych funkcji pierwotnych (takich jak np. sin, cos, tg, ln, exp, itp.)
+Razem z bibliotek¹ (jako weryfikacja jej dzia³ania) powinien byæ dostarczony program,
+który z jednego pliku czyta postaæ funkcji (zdefiniowanej przez u¿ytkownika – np. 'x^2 + 3*sin(y)') 
+a z drugiego wartoœci parametrów (w tym przypadku x i y), dla których ma wyliczaæ wartoœci – jako efekt dzia³ania program 
+powinien zapisaæ do pliku wyliczone wartoœci funkcji dla zadanych wartoœci parametrów (zmiennych).

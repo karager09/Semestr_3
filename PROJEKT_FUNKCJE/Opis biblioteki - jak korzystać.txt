@@ -1,0 +1,42 @@
+Celem projektu by³o zaimplementowanie biblioteki pozwalaj¹cej na obliczanie wartoœci funkcji w punkcie.
+Klas¹ wykonuj¹c¹ to zadanie jest Oblicz. Dzia³a ona podobnie jak biblioteka Math. 
+Chc¹c skorzystaæ z danej funkcji nie musimy tworzyæ konkretnego obiektu,  
+a nawet nie mo¿emy, gdy¿ klasa Oblicz jest klas¹ abstrakcyjn¹.
+Funkcj¹ jak¹ musimy wywo³aæ, aby dokonaæ obliczeñ jest „zamienIOblicz()”,
+St¹d przyk³adowe wywo³anie to
+Oblicz.zamienIOblicz(...) w wyniku którego zwracany jest wynikowy String.
+Jest to funkcja przeci¹¿ona i w zale¿noœci od tego co chcemy obliczyæ, mo¿emy u¿yæ ró¿nych sposobów jej wywo³ania.
+Jest ich kilka:
+-zamienIOblicz(String doObliczenia,String argumenty,WlasnaFunkcjaInterfejs ... wlasneFunkcje)
+-zamienIOblicz(String doObliczenia)
+-zamienIOblicz(String doObliczenia,WlasnaFunkcjaInterfejs ... wlasneFunkcje)
+
+Objaœnienie:
+-String doObliczenia – funkcja, któr¹ chcemy obliczyæ zapisana jako String
+wbudowane operacje: '+','-','*','/','^'.
+Nawiasy powinny byæ u¿ywane w³aœciwie.
+Elementy opcjonalne:
+-String argumenty – deklaracje zmiennych i ich wartoœci, jeœli jest ich kilka to musz¹ byæ oddzielone przecinkami, przyk³adowo:  „x=3,y=1,z=0”.
+Wartoœciami zmiennych nie musz¹ byæ konkretne liczby, mog¹ one wykorzystywaæ funkcje (jednoargumentowe) i operacje arytmetyczne.
+- WlasnaFunkcjaInterfejs ... wlasneFunkcje – je¿eli chcemy skorzystaæ z jakiejœ funkcji matematycznej albo stworzyæ w³asn¹ to musi ona implementowaæ interfejs WlasnaFunkcjaInterfejs.
+
+
+Implementuj¹c dodatkowe funkcje za pomoc¹ WlasnaFunkcjaInterfejs musimy stworzyæ 3 metody:
+- double implementacjaFunkcji(double... argumenty)
+Czêœæ obliczeniowa funkcji.
+- byte iloscArgumentow()
+Zwraca ile argumentów przyjmuje nasza funkcja
+- String nazwaFunkcji()
+Zwraca nazwê funkcji pod jak¹ bêdzie identyfikowana w Stringu doObliczenia (powinna byæ pisana ma³ymi literami)
+
+Przyk³ad:
+max(2,3)
+
+Dodatkowo do przetestowania dzia³ania klasy zosta³a stworzona klasa LiczZPlikow i jej metoda 
+liczZPlikow(File funkcje,File wartosci,File wynik,WlasnaFunkcjaInterfejs ... wf) oraz LiczZPlikowWielePunktow i metoda liczZPlikowWielePunktow(...).,
+która przyjmuje funkcje do obliczenia z jednego pliku, z drugiego wartoœci argumentów i wyniki zapisuje do trzeciego pliku. 
+Mo¿na wyœwietlaæ co posz³o nie tak za pomoc¹ info analogicznie jak wy¿ej.
+
+WA¯NE: Je¿eli coœ siê nie powiod³o wyrzucony zostaje wyj¹tek Exception, w którym zawarty jest odpowiedni komunikat.
+Zazwyczaj wynika to ze z³ego zapisania funkcji (np. nawiasowanie), z³e wartoœci argumentów lub brak odpowiednich zaimplementowanych funkcji w³asnych.
+

@@ -1,0 +1,12 @@
+max(maxt(1,2,3),-5)
+exp(exp(max(-1,0)))
+ln-1
+exp(0)
+sin(x)^2+cos(x)^2
+x-x/x+x/-x
+x-x/x+x/-x
+2+2*2+2/2-2*(2-1)
+maxt(1,2,max(3,4))+x*y/(x*y)+sinx^2+cosx^2
+
+
+
